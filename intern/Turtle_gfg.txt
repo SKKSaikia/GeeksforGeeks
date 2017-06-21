@@ -1,0 +1,410 @@
+import turtle
+
+variable = turtle.Turtle()
+variable.forward(100)
+variable = turtle.Turtle()
+variable.forward(100)
+variable.left(90)
+variable.forward(100)
+variable.right(90)
+variable.forward(100)
+
+===========================================================
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("light green")
+wn.title("Turtle")
+skk=turtle.Turtle()
+skk.color("blue")
+
+def sqrfunc(size):
+	for i in range(4):
+		skk.fd(size)
+		skk.left(90)
+		size = size-5
+
+sqrfunc(146)
+sqrfunc(126)
+sqrfunc(106)
+sqrfunc(86)
+sqrfunc(66)
+sqrfunc(46)
+sqrfunc(26)
+
+===========================================================
+
+import turtle
+wn = turtle.Screen()
+wn.bgcolor("light green")
+skk=turtle.Turtle()
+skk.color("blue")
+
+def sqrfunc(size):
+	for i in range(4):
+		skk.fd(size)
+		skk.left(90)
+		size = size+5
+
+sqrfunc(6)
+sqrfunc(26)
+sqrfunc(46)
+sqrfunc(66)
+sqrfunc(86)
+sqrfunc(106)
+sqrfunc(126)
+sqrfunc(146)
+
+
+===========================================================
+
+import turtle
+myPen = turtle.Turtle()
+myPen.speed(0)
+myPen.color("#FF0000")
+
+side=400
+myPen.penup()
+myPen.goto(-200,-200) #position cursor at the bootom right of the screen
+myPen.pendown()
+
+#Start Spiral
+for i in range (1,100):
+   myPen.forward(side)
+   myPen.left(90)
+   side=side-4
+
+
+===========================================================
+
+import turtle
+
+myPen = turtle.Turtle()
+myPen.speed(0)
+myPen.color("#FF0000")
+
+side=20
+myPen.penup()
+myPen.goto(0,0) #position cursor at the bootom right of the screen
+myPen.pendown()
+
+for i in range (1,50):
+  myPen.forward(side)
+  myPen.left(92)
+  side=side+7
+
+
+myPen.penup()
+myPen.goto(500,500)
+
+#Start Spiral
+#for i in range (1,20):
+#  for j in range (0,4):
+#      myPen.forward(side)
+#      myPen.left(90)
+#  myPen.left(20)
+#  side=side+5
+
+===========================================================
+import turtle
+import math
+
+myPen = turtle.Turtle()
+myPen.speed(0)
+myPen.color("#000000")
+size=200
+
+myPen.setheading(90) #Point the top
+for i in range(0,6):
+  myPen.forward(size)
+  myPen.penup()
+  myPen.forward(-size)
+  myPen.left(60)
+  myPen.pendown()
+
+myPen.setheading(90) #Point the top
+myPen.forward(size)
+myPen.setheading(215) #Point the left
+newSize=size
+newSize = (newSize*(math.sqrt(3)/2)) / math.sin(math.radians(65))
+for i in range(0,30):  
+   myPen.forward(newSize)
+   myPen.left(60)
+   newSize = (newSize*(math.sqrt(3)/2)) / math.sin(math.radians(70))
+
+  ===========================================================
+
+import turtle
+import time
+import random
+
+print ("This program draws shapes based on the number you enter in a uniform pattern.")
+num_str = input("Enter the side number of the shape you want to draw: ")
+if num_str.isdigit():
+    squares = int(num_str)
+
+angle = 180 - 180*(squares-2)/squares
+
+turtle.up
+
+x = 0 
+y = 0
+turtle.setpos(x,y)
+
+
+numshapes = 8
+for x in range(numshapes):
+    turtle.color(random.random(),random.random(), random.random())
+    x += 5
+    y += 5
+    turtle.forward(x)
+    turtle.left(y)
+    for i in range(squares):
+        turtle.begin_fill()
+        turtle.down()
+        turtle.forward(40)
+        turtle.left(angle)
+        turtle.forward(40)
+        print (turtle.pos())
+        turtle.up()
+        turtle.end_fill()
+
+time.sleep(11)
+turtle.bye()
+
+  ===========================================================
+import turtle
+
+spin = turtle.Turtle()
+roller = turtle.Screen()
+roller.bgcolor("black")
+spin.pensize(5)
+spin.speed(200)
+spin.pencolor("yellow")
+
+def Spinner(spin,match):
+	spin.fd(match)
+	spin.rt(60)
+	Spinner(spin,match - 4)
+
+Spinner(spin,200)
+mainloop()
+
+  ===========================================================
+
+import turtle
+turtle.bgcolor("black")
+turtle.speed(0)
+colors = ["red", "yellow", "blue", "green"]
+for x in range(360):
+    turtle.pencolor( colors[ x % 4 ] )
+    turtle.circle(x)
+    turtle.left(90)
+
+===========================================================
+from turtle import*
+
+shape("turtle")
+wheel = 12
+bgcolor("blue")
+pensize(10)
+pencolor("red")
+
+for i in range(wheel):
+	begin_fill();rt(90);fd(200);lt(120);fd(200);lt(120);fd(200);end_fill()
+	fd(200)
+
+
+===========================================================
+
+import turtle
+loadWindow = turtle.Screen()
+turtle.speed(2)
+
+for i in range(100):
+	turtle.circle(5*i)
+	turtle.circle(-5*i)
+	turtle.left(i)
+
+turtle.exitonclick()
+
+
+===========================================================
+
+import turtle
+loadWindow = turtle.Screen()
+turtle.speed(0)
+
+for i in range(100):
+	turtle.circle(5*i)
+	turtle.circle(-5*i)
+	turtle.left(i)
+
+turtle.exitonclick()
+===========================================================
+
+import turtle
+loadWindow = turtle.Screen()
+turtle.colormode(255)
+
+turtle.speed(0)
+
+for i in range(127):
+	turtle.circle(5*i)
+	turtle.circle(-5*i)
+	turtle.left(i)
+	b=i
+	if b > 51:
+		b=51
+	turtle.color(i,2*i,5*b)
+turtle.exitonclick()
+
+===========================================================
+import turtle
+colors = ['red','purple','blue','green','orange','yellow']
+t = turtle.Pen()
+turtle.bgcolor('black')
+for x in range(360):
+	t.pencolor(colors[x%6])
+	t.width(x/100+1)
+	t.forward(x)
+	t.left(59)
+
+
+
+
+
+
+
+===========================================================
+import turtle as t
+colors = ["blue", "green", "purple", "cyan", "magenta", "violet"]
+t.reset()
+t.tracer(0, 0)
+for i in range(45):
+	t.color(colors[i % 6])
+	t.pendown()
+	t.fd(2 + i * 5)
+	t.left(45)
+	t.width(i)
+	t.penup()
+
+t.update()
+
+===========================================================
+import turtle 
+import time
+screen=turtle.Screen()
+trtl=turtle.Turtle()
+screen.setup(420,320)
+screen.bgcolor('black')
+clr=['red','green','blue','yellow','purple']
+trtl.pensize(4)
+trtl.penup()
+trtl.setpos(-90,30)
+trtl.pendown()
+for i in range(5):
+     trtl.pencolor(clr[i])
+     trtl.forward(200)
+     trtl.right(144)
+trtl.penup()
+trtl.setpos(80,-140)
+trtl.pendown()
+trtl.pencolor('olive')
+trtl.write('Turtle',font=("Arial", 12, "normal"))
+trtl.ht()
+===========================================================
+import turtle 
+screen=turtle.Screen()
+trtl=turtle.Turtle()
+screen.setup(620,620)
+screen.bgcolor('black')
+clr=['red','green','blue','yellow','purple']
+trtl.pensize(4)
+trtl.shape('turtle')
+trtl.penup()
+trtl.pencolor('red')
+m=0
+for i in range(12):
+      m=m+1
+      trtl.penup()
+      trtl.setheading(-30*i+60)
+      trtl.forward(150)
+      trtl.pendown()
+      trtl.forward(25)
+      trtl.penup()
+      trtl.forward(20)
+      trtl.write(str(m),align="center",font=("Arial", 12, "normal"))
+      if m==12:
+        m=0
+      trtl.home()
+trtl.home()
+trtl.setpos(0,-250)
+trtl.pendown()
+trtl.pensize(10)
+trtl.pencolor('blue')
+trtl.circle(250)
+trtl.penup()
+trtl.setpos(150,-270)
+trtl.pendown()
+trtl.pencolor('olive')
+trtl.write('Turtle',font=("Arial", 12, "normal"))
+trtl.ht()
+===========================================================
+import turtle as t
+def drawfib(n, len_ang):
+	t.forward(2 * len_ang)
+	if n == 0:
+		pass
+	elif n == 1:
+		pass
+	else:
+		t.left(len_ang)
+		drawfib(n - 1, len_ang)
+		t.right(2 * len_ang)
+		drawfib(n - 2, len_ang)
+		t.left(len_ang)
+	t.backward(2 * len_ang)
+# Six different starting points for six different trees.
+start_points = [[-300, 250], [-150, 250],[-300, 110], [-80, 110],[-300, -150], [50, -150]]
+# For each starting point, draw a tree with n varying
+# between 1 and 6 and len_ang set to 30.
+n = 0
+for start_point in start_points:
+	x, y = start_point
+	n = n + 1
+	t.penup()
+	t.setpos(x, y)
+	t.pendown()
+	drawfib(n, 30)
+
+
+
+===========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
